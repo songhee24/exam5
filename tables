@@ -1,0 +1,13 @@
+create table users_exam(
+    id serial primary key ,
+    name varchar(50) not null,
+    age int not null,
+    gender varchar(50) not null
+);
+
+
+create table requests(
+    id serial primary key,
+    users_add int references users_exam(id),
+    dateOfCreated timestamp not null
+);
